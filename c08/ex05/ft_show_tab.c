@@ -1,6 +1,18 @@
 #include "ft_stock_str.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+
+void    ft_putchar(char c)
+{
+    write(1, &c, 1);
+}
+
+void    ft_putstr(char *str)
+{
+    while (*str)
+        write(1, str++, 1);
+    ft_putchar('\n');
+}
 
 int ft_strlen(char *str)
 {
@@ -50,29 +62,36 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
     return (string_array);
 }
 
-/*int    main()
+void    ft_show_tab(struct s_stock_str *par)
 {
-    const int    SIZE = 5;
-    char    *str_array[6] = {"Salut", "Bonjour", "Douglas", "Test", "Comment allez-vous ? Moi ca va."};
-    t_stock_str *struct_array = ft_strs_to_tab(SIZE, str_array);
-    for (int i = 0; i < SIZE; i++){
-        printf("struct_array[%d] :\n", i);
-        printf("   size : %d\n   str  : %s\n   copy : %s\n\n", struct_array[i].size, struct_array[i].str, struct_array[i].copy);
-    }
+    int i;
+
+    i = 0;
+    while (par[i].str)
+        ft_putstr(par[i++].str);
+}
+
+/*int main(void)
+{
+    t_stock_str *string_array;
+    char *strs[5] = {"PCF", "LFI", "EELV", "PS", 0};
+    int size = 4;
+
+    string_array = ft_strs_to_tab(size, strs);
+    ft_show_tab(string_array);
+    return (0);
 }*/
 
 int main(int argc, char **argv)
 {
     t_stock_str *string_array;
-    int i = 0;
 
     if (argc < 2)
-        printf("\n");
+        ft_putchar('\n');
     else
     {
         string_array = ft_strs_to_tab(argc, argv);
-        while (i < argc)
-            printf("%s\n", string_array[i++].str);
+        ft_show_tab(string_array);
     }
     return (0);
 }
