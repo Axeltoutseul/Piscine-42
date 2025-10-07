@@ -1,18 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: axbaudri <axbaudri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 18:08:21 by axbaudri          #+#    #+#             */
+/*   Updated: 2025/10/06 18:10:12 by axbaudri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../ft.h"
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s1[i] && s1[i] == s2[i])
-        i++;
-    return (s1[i] - s2[i]);
+	i = 0;
+	while (s1[i] && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }
 
-
-int main(void)
+/*int	main(void)
 {
-    ft_putstr("Quoi");
-    return (0);
-}
+	ft_putstr("Quoi");
+	return (0);
+}*/

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: axbaudri <axbaudri@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 17:51:43 by axbaudri          #+#    #+#             */
+/*   Updated: 2025/10/06 17:59:05 by axbaudri         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_BOOLEAN_H
 # define FT_BOOLEAN_H
 # define TRUE 1
@@ -9,6 +21,6 @@
 # include <unistd.h>
 # include <stdbool.h>
 
-typedef bool t_bool;
+typedef bool	t_bool;
 
 #endif
